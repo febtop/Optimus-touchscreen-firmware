@@ -1,0 +1,140 @@
+﻿#mainboard(1:marlin;2:repetier;3:smoothie)
+>cfg_firmware_type:3
+
+#machine type(1:Normal;2:Delta)
+>cfg_machine_type:2
+
+#BAUD RATE(1:9600;2:57600;3:115200;4:250000)
+>cfg_baud_rate:3
+
+#LANG(1:simpleChinese;2:complexChinese;3:English)
+>cfg_language_type:3
+
+#one key extrude
+>cfg_onekey_in_out_ABStemper:235
+>cfg_onekey_in_out_PLAtemper:215
+>cfg_onekey_in_out_Length:730
+
+#machine type num
+>cfg_machine_config_cnt:4
+#machine code
+>cfg_machine_config1:M1 D;
+>cfg_machine_config2:M1 C;
+>cfg_machine_config3:M1 CL;
+>cfg_machine_config4:M1 P;
+>cfg_machine_config5:M1 C;
+
+#autolevel type num
+>cfg_leveling_cnt:4
+#autolevel code
+>cfg_leveling1_cmd:G92 Z0;
+>cfg_leveling2_cmd:G30 Z0;
+>cfg_leveling3_cmd:G28;G91;G1 Z-250 F6000;G90;M306 X0 Y0;G92 X80 Y80;G1 X0 Y0;M03 S15;
+>cfg_leveling4_cmd:G92.1;M306 X0 Y0;G28 Z;G31 J30;G1 X0 Y0 F2000;G30 Z0;G92 X30 Y30 Z0;G1 Z5 F1000;
+>cfg_leveling5_cmd:G28;
+>cfg_leveling6_cmd:G28;
+>cfg_leveling7_cmd:G28;
+
+
+#extend fuction
+>cfg_print_finish_close_Machine:0
+
+#pause postion(invaild -1;Z relative postion)
+>cfg_XPOS:-1
+>cfg_YPOS:-1
+>cfg_ZADD:10
+
+#extruder(1:single,2:dual)
+>cfg_sprayer_counter:1
+
+#heatbed(1:heatbed，0:none)
+>cfg_custom_bed_flag:1
+
+#extruder/headbed max temperature
+>cfg_max_sprayer_temperature:270
+>cfg_max_hotbed_temperature:150
+
+#extend function 2
+>cfg_PB0_PB1_Level:1
+
+#wifi mode(1:AP,0:STA)
+>cfg_wifi_mode:1
+
+#wifi name/code
+>cfg_wifi_ap_name:Optimus
+>cfg_wifi_key_code:febtoptech
+
+#dhcp function
+>cfg_ip_dhcp_flag:1
+
+#IP address/mask/gat
+>cfg_ip_address:192.168.3.100
+>cfg_ip_mask:255.255.255.0
+>cfg_ip_gate:192.168.3.1
+
+#background color
+>cfg_background_color:0x4F4F2F
+#title color
+>cfg_title_color:0xFFFFFF
+#state background color
+>cfg_state_background_color:0x7B00E3
+#state text color
+>cfg_state_text_color:0xFFFFFF
+#filename background color
+>cfg_filename_background_color:0x000000
+#filename txt color
+>cfg_filename_color:0xFFFFFF
+#print state word background color
+>cfg_printingstat_word_background_color:0xD6EC17
+#printstate text color
+>cfg_printingstat_word_color:0xB469FF
+
+#3D effect(0:disable,1:enable)
+>cfg_BUTTON_3D_effects:0
+
+#filament change speed(mm/min)
+>cfg_filament_change_speed:1200
+#filament change step(mm)
+>cfg_filament_change_step:5
+#filament limit temperature
+>cfg_filament_limit_temperature:175
+
+#aotulevel speed(mm/min)/disable
+>cfg_leveling_z_speed:1500
+>cfg_leveling_xy_speed:3000
+
+#extend function disable
+>cfg_breakpoint_z_error:0.2
+
+#function button(0:display,1:play)
+>cfg_function_btn1_display:1
+>cfg_function_btn2_display:0
+
+#function button code
+>function_btn1_cmd:M84;
+>function_btn2_cmd:M81;
+
+#more button num
+>moreitem_pic_cnt:2
+
+#more button code
+>moreitem_button1_cmd:G92 Z0;
+
+>moreitem_button2_cmd:G30 Z0;G92 Z0;
+
+>moreitem_button3_cmd:G28 Y0;
+
+>moreitem_button4_cmd:G28 Y0;
+
+>moreitem_button5_cmd:G28 Z0;
+
+>moreitem_button6_cmd:G28 Z0;
+
+>moreitem_button7_cmd:G28;
+
+#print state morefunction num
+>morefunc_cnt:2
+
+#function code
+>morefunc1_cmd:G28;
+>morefunc2_cmd:G28;
